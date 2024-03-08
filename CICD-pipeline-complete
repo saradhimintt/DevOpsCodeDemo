@@ -39,11 +39,11 @@ pipeline{
                 sh 'docker push edu123/myimagejenkins:$BUILD_NUMBER'
             }
         }
-        
+    /*    
         stage('Deploy in kube'){
             steps{
                 kubernetesDeploy configs: 'kubedeploy.yml', kubeConfig: [path: ''], kubeconfigId: 'kube_config', secretName: '', ssh: [sshCredentialsId: '*', sshServer: ''], textCredentials: [certificateAuthorityData: '', clientCertificateData: '', clientKeyData: '', serverUrl: 'https://']
             }
-        }
+        }*/
     }
 }
